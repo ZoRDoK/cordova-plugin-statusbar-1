@@ -57,9 +57,9 @@ public class StatusBar extends CordovaPlugin {
                 // by the Cordova.
                 Window window = cordova.getActivity().getWindow();
                 window.clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
-
+                window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
                 // Read 'StatusBarBackgroundColor' from config.xml, default is #000000.
-                setStatusBarBackgroundColor(preferences.getString("StatusBarBackgroundColor", "#000000"));
+                //setStatusBarBackgroundColor(preferences.getString("StatusBarBackgroundColor", "#000000"));
             }
         });
     }
